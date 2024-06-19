@@ -1,27 +1,27 @@
 pipeline {
-  agent any 
-  stages {
-    satge("build") {
-      steps {
-        echo 'This is build stage'
-      }
-      
+  agent any
+
+ stages{
+   stage('build') {
+     steps {
+       echo 'building the application'  
+     }
+
+  stages{
+   stage('test') {
+     steps {
+       echo 'testing the application'  
+     }   
+
+stages{
+   stage('deploy') {
+     steps {
+       echo 'deploying the application'  
+     } 
+   }  
   }
-  stages {
-    stage("Test") {
-      steps {
-        echo 'This is test stage'
-        
-      }
-    }
-  }
-    
-  stages {
-    stage("deploy") {
-      steps {
-        echo 'This is deploy stage'
-      }
-    }
+ } 
 }
-}
-}
+   }
+ }
+}     
