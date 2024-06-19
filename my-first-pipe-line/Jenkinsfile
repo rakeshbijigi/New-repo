@@ -3,16 +3,25 @@ pipeline {
   stages {
     satge("build") {
       steps {
-        echo "This is build stage"
+        echo 'This is build stage'
       }
       
   }
   stages {
     stage("Test") {
       steps {
-        echo "This is test stage"
+        echo 'This is test stage'
+        
       }
     }
   }
+    
+  stages {
+    stage("deploy") {
+      steps {
+        echo 'This is deploy stage'
+      }
+    }
+}
 }
 }
